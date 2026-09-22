@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>cool cirBTC ($COOLBTC)</title>
+  <meta name="description" content="Jeremy Allaire said cirBTC is cool too. The meme train is leaving the station—hop on before it zooms! Buy $COOLBTC with Arc USDC.">
+  <meta name="theme-color" content="#2775CA">
+  <meta property="og:title" content="cool cirBTC ($COOLBTC)">
+  <meta property="og:description" content="Jeremy Allaire said cirBTC is cool too. The meme train is leaving the station—hop on before it zooms!">
+  <meta property="og:image" content="banner.jpg">
+  <link rel="icon" href="logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            usdc: "#2775CA",
+            cool: "#7C6BF2"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      --usdc: #2775CA;
+      --logo-blue: #3B82F6;
+      --logo-purple: #8B5CF6;
+    }
+    body {
+      font-family: "Outfit", ui-sans-serif, system-ui, sans-serif;
+      color: #f4f7ff;
+      background-color: #070b18;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(39, 117, 202, 0.28), transparent 60%),
+        linear-gradient(180deg, rgba(6, 10, 26, 0.42) 0%, rgba(6, 10, 26, 0.72) 45%, rgba(5, 8, 20, 0.84) 100%),
+        url("bg.png");
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+    }
+    @media (min-width: 768px) {
+      body { background-attachment: fixed; }
+    }
+    ::selection { background: #2775CA; color: #fff; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid #9ec8ff;
+      outline-offset: 3px;
+    }
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: ticker 32s linear infinite;
+    }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    .floaty { animation: floaty 5.5s ease-in-out infinite; }
+    .ca-shell {
+      background:
+        linear-gradient(rgba(7, 12, 28, 0.78), rgba(7, 12, 28, 0.78)) padding-box,
+        linear-gradient(120deg, #2775CA, #60a5fa 40%, #8B5CF6) border-box;
+      border: 1px solid transparent;
+    }
+    .shine { position: relative; overflow: hidden; }
+    .shine::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(110deg, transparent 32%, rgba(255,255,255,0.38) 50%, transparent 68%);
+      transform: translateX(-130%);
+    }
+    .shine:hover::after { animation: shine 0.75s ease; }
+    @keyframes shine { to { transform: translateX(130%); } }
+    @media (prefers-reduced-motion: reduce) {
+      .ticker-track, .floaty, .shine::after { animation: none; }
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <header id="top" class="sticky top-0 z-50 border-b border-white/10 bg-[#070b18]/60 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
+      <a href="#top" class="flex min-w-0 items-center gap-2.5">
+        <img src="logo.jpg" alt="" class="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-[#7eb6ff]/70" width="40" height="40">
+        <span class="truncate text-base font-extrabold tracking-tight sm:text-lg">cool cirBTC</span>
+      </a>
+      <nav class="flex items-center gap-1.5 sm:gap-2" aria-label="Primary">
+        <a href="#how-to-buy" class="hidden rounded-full px-3 py-2 text-sm font-semibold text-white/80 transition hover:bg-white/10 hover:text-white sm:inline">How to Buy</a>
+        <a href="#chart" class="hidden rounded-full px-3 py-2 text-sm font-semibold text-white/80 transition hover:bg-white/10 hover:text-white md:inline">Chart</a>
+        <a href="https://t.me/coolcirBTC" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="grid h-10 w-10 place-items-center rounded-full transition hover:scale-105">
+          <img src="tg.png" alt="" class="h-10 w-10 rounded-full object-cover" width="40" height="40">
+        </a>
+        <a href="https://x.com/coolcirBTC" target="_blank" rel="noopener noreferrer" aria-label="X" class="grid h-10 w-10 place-items-center overflow-hidden rounded-full bg-black ring-1 ring-white/20 transition hover:scale-105">
+          <img src="x.png" alt="" class="h-10 w-10 object-cover" width="40" height="40">
+        </a>
+        <a href="https://argus.world/token/TBA" target="_blank" rel="noopener noreferrer" class="shine ml-1 inline-flex items-center rounded-full bg-[#2775CA] px-4 py-2.5 text-sm font-bold text-white shadow-[0_8px_24px_rgba(39,117,202,0.45)] transition hover:bg-[#1f68b8]">Buy Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="overflow-hidden border-b border-white/10 bg-[#2775CA] text-white">
+    <div class="ticker-track py-2.5 text-sm font-semibold tracking-wide">
+      <p class="px-4">cool cirBTC &nbsp;·&nbsp; $COOLBTC &nbsp;·&nbsp; Buy with Arc USDC &nbsp;·&nbsp; Jeremy Allaire said cirBTC is cool too &nbsp;·&nbsp; The meme train is leaving the station &nbsp;·&nbsp; hop on before it zooms &nbsp;·&nbsp;</p>
+      <p class="px-4" aria-hidden="true">cool cirBTC &nbsp;·&nbsp; $COOLBTC &nbsp;·&nbsp; Buy with Arc USDC &nbsp;·&nbsp; Jeremy Allaire said cirBTC is cool too &nbsp;·&nbsp; The meme train is leaving the station &nbsp;·&nbsp; hop on before it zooms &nbsp;·&nbsp;</p>
+    </div>
+  </div>
+
+  <main>
+    <section class="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:py-24">
+      <div class="order-2 text-center lg:order-1 lg:text-left">
+        <p class="inline-flex items-center gap-2 rounded-full border border-[#7eb6ff]/40 bg-[#2775CA]/20 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-[#c5deff]">
+          <span class="h-1.5 w-1.5 rounded-full bg-[#7eb6ff]"></span>
+          Arc meme · settled in USDC
+        </p>
+        <h1 class="mt-5 text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-7xl">
+          cool <span class="bg-gradient-to-r from-[#6AADFF] to-[#C4B5FD] bg-clip-text text-transparent">cirBTC</span>
+        </h1>
+        <p class="mt-3 font-mono text-sm font-semibold tracking-[0.35em] text-[#9ec8ff]">$COOLBTC</p>
+        <blockquote class="mx-auto mt-6 max-w-xl border-l-4 border-[#2775CA] pl-4 text-left lg:mx-0">
+          <p class="text-xl font-semibold leading-snug text-white sm:text-2xl">Jeremy Allaire said cirBTC is cool too.</p>
+          <p class="mt-2 text-base leading-relaxed text-white/75 sm:text-lg">The meme train is leaving the station—hop on before it zooms!</p>
+        </blockquote>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+          <a href="https://argus.world/token/TBA" target="_blank" rel="noopener noreferrer" class="shine inline-flex items-center gap-2 rounded-full bg-[#2775CA] px-7 py-3.5 text-base font-bold text-white shadow-[0_10px_36px_rgba(39,117,202,0.5)] transition hover:bg-[#1f68b8]">
+            Buy Now
+            <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" aria-hidden="true"><path d="M5 10h10M11 6l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://dexscreener.com/arc/TBA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-7 py-3.5 text-base font-bold text-white backdrop-blur transition hover:border-[#7eb6ff] hover:bg-white/10">
+            <svg viewBox="0 0 20 20" class="h-4 w-4 text-[#9ec8ff]" fill="none" aria-hidden="true"><path d="M3 14l4.2-4.2 2.6 2.6L17 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 6h5v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Chart
+          </a>
+          <a href="https://t.me/coolcirBTC" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="grid h-12 w-12 place-items-center rounded-full transition hover:scale-105">
+            <img src="tg.png" alt="" class="h-12 w-12 rounded-full object-cover" width="48" height="48">
+          </a>
+          <a href="https://x.com/coolcirBTC" target="_blank" rel="noopener noreferrer" aria-label="X" class="grid h-12 w-12 place-items-center overflow-hidden rounded-full bg-black ring-1 ring-white/25 transition hover:scale-105">
+            <img src="x.png" alt="" class="h-12 w-12 object-cover" width="48" height="48">
+          </a>
+        </div>
+
+        <div class="ca-shell mx-auto mt-8 max-w-xl rounded-2xl p-3 sm:p-2 sm:pl-5 lg:mx-0">
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div class="min-w-0 text-left">
+              <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-[#9ec8ff]">Contract address</p>
+              <p class="truncate font-mono text-lg font-semibold text-white" data-ca>TBA</p>
+            </div>
+            <button type="button" onclick="copyCA(this)" class="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-4 py-3 text-sm font-bold text-[#12345c] transition hover:bg-[#e7f1ff]">
+              <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" aria-hidden="true"><rect x="7" y="7" width="9" height="9" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="M5 13V5.5A1.5 1.5 0 0 1 6.5 4H13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <span data-label>Copy CA</span>
+            </button>
+          </div>
+        </div>
+        <p id="copy-status" class="sr-only" aria-live="polite"></p>
+
+        <dl class="mx-auto mt-5 grid max-w-xl grid-cols-3 gap-2 text-left lg:mx-0">
+          <div class="rounded-2xl border border-white/10 bg-[#070b18]/55 px-3 py-3 backdrop-blur">
+            <dt class="text-[10px] font-bold uppercase tracking-[0.16em] text-[#9ec8ff]">Chain</dt>
+            <dd class="mt-1 text-sm font-bold">Arc</dd>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-[#070b18]/55 px-3 py-3 backdrop-blur">
+            <dt class="text-[10px] font-bold uppercase tracking-[0.16em] text-[#9ec8ff]">Pay with</dt>
+            <dd class="mt-1 text-sm font-bold">Arc USDC</dd>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-[#070b18]/55 px-3 py-3 backdrop-blur">
+            <dt class="text-[10px] font-bold uppercase tracking-[0.16em] text-[#9ec8ff]">Symbol</dt>
+            <dd class="mt-1 text-sm font-bold">COOLBTC</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="order-1 flex justify-center lg:order-2">
+        <div class="floaty relative">
+          <div class="absolute inset-6 rounded-full bg-gradient-to-br from-[#2775CA] to-[#8B5CF6] opacity-80 blur-3xl"></div>
+          <img src="logo.jpg" alt="cool cirBTC logo" class="relative h-56 w-56 rounded-full object-cover shadow-[0_20px_80px_rgba(39,117,202,0.45)] ring-4 ring-white/15 sm:h-72 sm:w-72" width="288" height="288">
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-4 pb-6 sm:px-6" aria-label="Banner">
+      <img src="banner.jpg" alt="cool cirBTC beside the Arc coin" class="w-full rounded-[28px] border border-white/10 object-cover shadow-[0_30px_80px_rgba(0,0,0,0.45)]" width="1600" height="640">
+    </section>
+
+    <section id="jeremy" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+      <div class="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div>
+          <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-[#9ec8ff]">From the station</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">He said it. The train is moving.</h2>
+          <p class="mt-4 text-lg leading-relaxed text-white/75">Jeremy Allaire said cirBTC is cool too. The meme train is leaving the station—hop on before it zooms!</p>
+          <p class="mt-4 text-sm leading-relaxed text-white/60">$COOLBTC is the cool cirBTC meme on Arc. You board it with Arc USDC. The post is embedded here so you can read it straight from the source.</p>
+          <a href="https://x.com/jerallaire/status/2102475417592754461" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#9ec8ff] underline-offset-4 hover:underline">
+            Open the post on X
+            <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" aria-hidden="true"><path d="M5 15L15 5M8 5h7v7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="flex justify-center rounded-[28px] border border-white/10 bg-[#070b18]/55 p-4 backdrop-blur-md sm:p-6">
+          <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none">
+            <a href="https://x.com/jerallaire/status/2102475417592754461">Jeremy Allaire on X</a>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-to-buy" class="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+      <div class="rounded-[32px] border border-white/10 bg-[#070b18]/55 p-6 backdrop-blur-md sm:p-10">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div class="max-w-2xl">
+            <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-[#9ec8ff]">Arc USDC only</p>
+            <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-5xl">How to Buy</h2>
+            <p class="mt-4 text-base leading-relaxed text-white/75 sm:text-lg">Four steps. One fuel: Arc USDC. Jeremy Allaire said cirBTC is cool too — the meme train is leaving the station, so hop on before it zooms.</p>
+          </div>
+          <a href="https://argus.world/token/TBA" target="_blank" rel="noopener noreferrer" class="shine inline-flex shrink-0 items-center justify-center rounded-full bg-[#2775CA] px-6 py-3 text-sm font-bold text-white shadow-[0_8px_24px_rgba(39,117,202,0.45)] transition hover:bg-[#1f68b8]">Buy Now</a>
+        </div>
+
+        <ol class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <li class="rounded-3xl border border-white/10 bg-gradient-to-b from-[#2775CA]/25 to-white/[0.03] p-5">
+            <span class="grid h-11 w-11 place-items-center rounded-full bg-[#2775CA] text-base font-extrabold shadow-[0_0_22px_rgba(39,117,202,0.55)]">1</span>
+            <h3 class="mt-4 text-lg font-bold">Load Arc USDC</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">Add Arc to your wallet and fund it with USDC. $COOLBTC is bought with Arc USDC, so that balance is the ticket.</p>
+          </li>
+          <li class="rounded-3xl border border-white/10 bg-white/[0.04] p-5">
+            <span class="grid h-11 w-11 place-items-center rounded-full bg-[#3B6FE0] text-base font-extrabold shadow-[0_0_22px_rgba(59,111,224,0.45)]">2</span>
+            <h3 class="mt-4 text-lg font-bold">Open Argus</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">Hit Buy Now and land on the $COOLBTC market. Connect the same wallet and stay on the Arc network.</p>
+          </li>
+          <li class="rounded-3xl border border-white/10 bg-white/[0.04] p-5">
+            <span class="grid h-11 w-11 place-items-center rounded-full bg-[#5B6BF0] text-base font-extrabold shadow-[0_0_22px_rgba(91,107,240,0.45)]">3</span>
+            <h3 class="mt-4 text-lg font-bold">Copy the CA</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">Copy the contract below and match it on the swap screen before you trade.</p>
+            <div class="mt-4 flex items-center justify-between gap-2 rounded-xl bg-[#070b18]/70 px-3 py-2 ring-1 ring-white/10">
+              <span class="truncate font-mono text-sm font-semibold" data-ca>TBA</span>
+              <button type="button" onclick="copyCA(this)" class="shrink-0 rounded-lg bg-[#2775CA] px-2.5 py-1.5 text-xs font-bold text-white transition hover:bg-[#1f68b8]">
+                <span data-label>Copy</span>
+              </button>
+            </div>
+          </li>
+          <li class="rounded-3xl border border-[#8B5CF6]/40 bg-gradient-to-b from-[#8B5CF6]/25 to-white/[0.03] p-5">
+            <span class="grid h-11 w-11 place-items-center rounded-full bg-gradient-to-br from-[#2775CA] to-[#8B5CF6] text-base font-extrabold">4</span>
+            <h3 class="mt-4 text-lg font-bold">Swap and board</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/70">Spend Arc USDC, review the quote, and confirm the swap into $COOLBTC. That’s you on the train.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="chart" class="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-[#9ec8ff]">Dexscreener</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">$COOLBTC chart</h2>
+          <p class="mt-3 max-w-xl text-white/70">Watch the Arc pair. The meme train is leaving the station—hop on before it zooms.</p>
+        </div>
+        <a href="https://dexscreener.com/arc/TBA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-bold text-white backdrop-blur transition hover:border-[#7eb6ff] hover:bg-white/10">
+          Chart
+          <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" aria-hidden="true"><path d="M5 15L15 5M8 5h7v7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="mt-6 overflow-hidden rounded-[28px] border border-white/10 bg-[#070b18]/70 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+        <iframe
+          src="https://dexscreener.com/arc/TBA?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+          title="Dexscreener chart for $COOLBTC on Arc"
+          class="h-[480px] w-full md:h-[620px]"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 bg-[#070b18]/75">
+    <div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:px-6 md:flex-row md:items-center md:justify-between">
+      <div class="flex items-center gap-3">
+        <img src="logo.jpg" alt="" class="h-12 w-12 rounded-full object-cover ring-2 ring-[#7eb6ff]/60" width="48" height="48">
+        <div>
+          <p class="text-lg font-extrabold">cool cirBTC</p>
+          <p class="font-mono text-xs tracking-[0.25em] text-[#9ec8ff]">$COOLBTC</p>
+        </div>
+      </div>
+      <p class="max-w-md text-sm leading-relaxed text-white/65">Jeremy Allaire said cirBTC is cool too. The meme train is leaving the station—hop on before it zooms!</p>
+      <div class="flex items-center gap-2">
+        <a href="https://t.me/coolcirBTC" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="grid h-11 w-11 place-items-center">
+          <img src="tg.png" alt="" class="h-11 w-11 rounded-full object-cover">
+        </a>
+        <a href="https://x.com/coolcirBTC" target="_blank" rel="noopener noreferrer" aria-label="X" class="grid h-11 w-11 place-items-center overflow-hidden rounded-full bg-black ring-1 ring-white/20">
+          <img src="x.png" alt="" class="h-11 w-11 object-cover">
+        </a>
+        <a href="https://dexscreener.com/arc/TBA" target="_blank" rel="noopener noreferrer" class="rounded-full border border-white/15 px-4 py-2.5 text-sm font-bold hover:bg-white/10">Chart</a>
+        <a href="https://argus.world/token/TBA" target="_blank" rel="noopener noreferrer" class="rounded-full bg-[#2775CA] px-4 py-2.5 text-sm font-bold hover:bg-[#1f68b8]">Buy Now</a>
+      </div>
+    </div>
+    <div class="border-t border-white/10 py-4 text-center text-xs text-white/45">
+      $COOLBTC is a meme on Arc. Not financial advice.
+    </div>
+  </footer>
+
+  <script>
+    const CA = "TBA";
+    document.querySelectorAll("[data-ca]").forEach((el) => { el.textContent = CA; });
+
+    function copyCA(btn) {
+      const label = btn.querySelector("[data-label]");
+      const status = document.getElementById("copy-status");
+      const finish = () => {
+        const previous = label.textContent;
+        label.textContent = "Copied";
+        if (status) status.textContent = "Contract address copied";
+        setTimeout(() => {
+          label.textContent = previous;
+          if (status) status.textContent = "";
+        }, 1600);
+      };
+      const fallback = () => {
+        const area = document.createElement("textarea");
+        area.value = CA;
+        area.setAttribute("readonly", "");
+        area.style.position = "fixed";
+        area.style.left = "-9999px";
+        document.body.appendChild(area);
+        area.select();
+        try { document.execCommand("copy"); finish(); } catch (e) {}
+        area.remove();
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(CA).then(finish).catch(fallback);
+      } else {
+        fallback();
+      }
+    }
+  </script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>
